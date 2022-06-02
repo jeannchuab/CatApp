@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="LoadingReusableViewCell" reuseIdentifier="LoadingReusableViewCell" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="LoadingReusableViewCell" reuseIdentifier="LoadingReusableViewCell" id="U6b-Vx-4bR" customClass="LoadingReusableViewCell" customModule="CatApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -23,6 +23,9 @@
                 <constraint firstItem="iH7-Fv-mB1" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="Nif-gR-rOe"/>
                 <constraint firstItem="iH7-Fv-mB1" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="b8O-BH-Rxp"/>
             </constraints>
+            <connections>
+                <outlet property="activityIndicator" destination="iH7-Fv-mB1" id="324-bO-9HE"/>
+            </connections>
             <point key="canvasLocation" x="132" y="131"/>
         </collectionReusableView>
     </objects>
