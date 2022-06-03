@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -15,15 +15,19 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9dR-oL-q9z">
-                                <rect key="frame" x="16" y="60" width="262" height="18.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de0-Du-J5V">
+                                <rect key="frame" x="24.5" y="201.5" width="271" height="77"/>
+                                <string key="text">Hummm it seems we don't have cats with this tag 😿 
+Would like to try "baby" or "kitten"? </string>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T5s-dG-uSP">
-                                <rect key="frame" x="0.0" y="126" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="82" width="320" height="398"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g4a-ZI-U6p">
                                     <size key="itemSize" width="120" height="120"/>
@@ -41,7 +45,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HE7-F1-H5x" customClass="CollectionViewItemCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="184" y="0.0" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qsu-o7-AqF">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -49,7 +53,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pZX-lB-AYZ" customClass="CollectionViewItemCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="278" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="16" y="130" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DY7-NN-N0s">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -57,7 +61,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Dan-Ma-v6p" customClass="CollectionViewItemCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="130" width="120" height="120"/>
+                                        <rect key="frame" x="184" y="130" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rjf-fa-gzn">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -65,7 +69,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Yvo-cO-CJl" customClass="CollectionViewItemCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="130" width="120" height="120"/>
+                                        <rect key="frame" x="16" y="260" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fg2-5z-qld">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -73,7 +77,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mdK-ua-rfX" customClass="CollectionViewItemCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="278" y="130" width="120" height="120"/>
+                                        <rect key="frame" x="184" y="260" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Jk-cf-f6O">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -83,29 +87,34 @@
                                 </cells>
                             </collectionView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What kind of cat do you like? Type here! " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yul-IW-qhq">
-                                <rect key="frame" x="16" y="60" width="382" height="50"/>
+                                <rect key="frame" x="16" y="16" width="288" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0RE-Ve-1FV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="de0-Du-J5V" secondAttribute="trailing" id="6Ei-0w-EoO"/>
                             <constraint firstItem="T5s-dG-uSP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYA-Ti-b0J"/>
                             <constraint firstItem="T5s-dG-uSP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DfR-H4-TBK"/>
                             <constraint firstItem="Yul-IW-qhq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LSV-PK-aRp"/>
                             <constraint firstItem="Yul-IW-qhq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="LU9-Hv-ciZ"/>
+                            <constraint firstItem="de0-Du-J5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WpR-bk-AT8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yul-IW-qhq" secondAttribute="trailing" constant="16" id="aAb-1r-gC4"/>
+                            <constraint firstItem="de0-Du-J5V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eVn-Ot-Opb"/>
                             <constraint firstItem="T5s-dG-uSP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="onO-s2-oVm"/>
+                            <constraint firstItem="de0-Du-J5V" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sE7-p3-MQa"/>
                             <constraint firstItem="T5s-dG-uSP" firstAttribute="top" secondItem="Yul-IW-qhq" secondAttribute="bottom" constant="16" id="w86-3j-f4e"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="T5s-dG-uSP" id="ETE-ia-Y2t"/>
+                        <outlet property="labelDisclaimer" destination="de0-Du-J5V" id="hdV-RZ-JHc"/>
                         <outlet property="textFieldSearch" destination="Yul-IW-qhq" id="R9I-Ei-3aw"/>
                     </connections>
                 </viewController>

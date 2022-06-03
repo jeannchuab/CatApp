@@ -26,7 +26,7 @@ struct CatModel: Codable {
     }
     
     func getImageUrl() -> String {
-        return "\("https://cataas.com/cat/")\(id)"
+        return "\(Global.defaultAPIUrl)\(Global.getCatEndpoint)\(id)"
     }
 }
 
@@ -37,15 +37,20 @@ struct CatModel: Codable {
  */
 
 class ViewModelCat {
-    let url = "https://cataas.com/api/cats?tags=cute"
+    let url = "\(Global.defaultAPIUrl)\(Global.getCatListEndpoint)"
     var catList: [CatModel] = []
             
     init() {
         print("Init of viewModel")
     }
     
-    func loadData(tag: String = "cute", completion: @escaping ([CatModel]) -> ()) {
-        AF.request(url).responseString { response in
+    func loadData(tag: String = "cute", completion: @escaping (Result<[CatModel], Error>) -> Void) {
+        let param = tag.isEmpty ? "cute" : tag
+        let filter = ["tags" : param]
+        
+        catList = []
+        
+        AF.request(url, parameters: filter).responseString { response in
             print(response)
             
             switch response.result {
@@ -67,11 +72,11 @@ class ViewModelCat {
                         }
                     }
                 } catch {
-                    print("Failed to load: \(error.localizedDescription)")
+                    completion(.failure(error))
                 }
-                completion(self.catList)
+                completion(.success(self.catList))
             case .failure(let error):
-                print(error)
+                completion(.failure(error))
             }
         }
     }
