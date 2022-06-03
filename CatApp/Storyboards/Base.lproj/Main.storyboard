@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R1o-OA-eEm">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -13,13 +13,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de0-Du-J5V">
-                                <rect key="frame" x="24.5" y="201.5" width="271" height="77"/>
+                                <rect key="frame" x="21" y="396.33333333333331" width="348.33333333333331" height="51.333333333333314"/>
                                 <string key="text">Hummm it seems we don't have cats with this tag 😿 
 Would like to try "baby" or "kitten"? </string>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
@@ -27,7 +27,7 @@ Would like to try "baby" or "kitten"? </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T5s-dG-uSP">
-                                <rect key="frame" x="0.0" y="82" width="320" height="398"/>
+                                <rect key="frame" x="0.0" y="170" width="390" height="640"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g4a-ZI-U6p">
                                     <size key="itemSize" width="120" height="120"/>
@@ -45,7 +45,7 @@ Would like to try "baby" or "kitten"? </string>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HE7-F1-H5x" customClass="CollectionViewItemCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="184" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="254" y="0.0" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qsu-o7-AqF">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -61,7 +61,7 @@ Would like to try "baby" or "kitten"? </string>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Dan-Ma-v6p" customClass="CollectionViewItemCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="184" y="130" width="120" height="120"/>
+                                        <rect key="frame" x="254" y="130" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rjf-fa-gzn">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -77,7 +77,7 @@ Would like to try "baby" or "kitten"? </string>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mdK-ua-rfX" customClass="CollectionViewItemCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="184" y="260" width="120" height="120"/>
+                                        <rect key="frame" x="254" y="260" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Jk-cf-f6O">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -87,13 +87,13 @@ Would like to try "baby" or "kitten"? </string>
                                 </cells>
                             </collectionView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What kind of cat do you like? Type here! " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yul-IW-qhq">
-                                <rect key="frame" x="16" y="16" width="288" height="50"/>
+                                <rect key="frame" x="16" y="104" width="358" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0RE-Ve-1FV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -112,18 +112,84 @@ Would like to try "baby" or "kitten"? </string>
                             <constraint firstItem="T5s-dG-uSP" firstAttribute="top" secondItem="Yul-IW-qhq" secondAttribute="bottom" constant="16" id="w86-3j-f4e"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Pkm-M3-MC3"/>
                     <connections>
                         <outlet property="collectionView" destination="T5s-dG-uSP" id="ETE-ia-Y2t"/>
                         <outlet property="labelDisclaimer" destination="de0-Du-J5V" id="hdV-RZ-JHc"/>
                         <outlet property="textFieldSearch" destination="Yul-IW-qhq" id="R9I-Ei-3aw"/>
+                        <segue destination="wbv-j1-wNY" kind="show" identifier="showCustomizeScreen" id="7Vn-kT-dF8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+            <point key="canvasLocation" x="1060" y="115.16587677725119"/>
+        </scene>
+        <!--Customize View Controller-->
+        <scene sceneID="KP2-ft-Ers">
+            <objects>
+                <viewController storyboardIdentifier="CustomizeViewController" id="wbv-j1-wNY" customClass="CustomizeViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5mH-j2-DDi">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catIcon" translatesAutoresizingMaskIntoConstraints="NO" id="C0M-ea-xdL">
+                                <rect key="frame" x="16" y="104" width="358" height="358"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C0M-ea-xdL" secondAttribute="height" multiplier="1:1" id="LF9-ru-6yc"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customize a phrase for your cat. Type here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOY-6p-ale">
+                                <rect key="frame" x="16" y="480" width="358" height="50"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PVA-9j-vQD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aPc-RK-ZGw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mOY-6p-ale" firstAttribute="top" secondItem="C0M-ea-xdL" secondAttribute="bottom" constant="18" id="4cH-rI-GDD"/>
+                            <constraint firstItem="C0M-ea-xdL" firstAttribute="top" secondItem="aPc-RK-ZGw" secondAttribute="top" constant="16" id="PUg-Np-hzP"/>
+                            <constraint firstItem="aPc-RK-ZGw" firstAttribute="trailing" secondItem="mOY-6p-ale" secondAttribute="trailing" constant="16" id="RLa-8s-fxC"/>
+                            <constraint firstItem="C0M-ea-xdL" firstAttribute="leading" secondItem="aPc-RK-ZGw" secondAttribute="leading" constant="16" id="e78-Cc-8qk"/>
+                            <constraint firstItem="mOY-6p-ale" firstAttribute="leading" secondItem="aPc-RK-ZGw" secondAttribute="leading" constant="16" id="fZH-8I-PQX"/>
+                            <constraint firstItem="aPc-RK-ZGw" firstAttribute="trailing" secondItem="C0M-ea-xdL" secondAttribute="trailing" constant="16" id="hRC-ZB-Tht"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w86-pe-RNa"/>
+                    <connections>
+                        <outlet property="imageView" destination="C0M-ea-xdL" id="KRc-Un-AQs"/>
+                        <outlet property="textFieldSearch" destination="mOY-6p-ale" id="84x-K7-yZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeq-Wu-Ycj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2363.0769230769229" y="114.45497630331754"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="clg-Uj-bNd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R1o-OA-eEm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zUx-V3-7mu">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4zn-ah-48N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHL-M4-L81" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.76923076923077" y="115.16587677725119"/>
         </scene>
     </scenes>
     <resources>
+        <image name="catIcon" width="24" height="24"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

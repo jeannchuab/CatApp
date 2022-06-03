@@ -42,6 +42,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="catIcon" width="16" height="16"/>
+        <image name="catIcon" width="24" height="24"/>
     </resources>
 </document>

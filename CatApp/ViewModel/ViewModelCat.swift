@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-struct CatModel: Codable {
+struct CatModal: Codable {
     let id: String
     let createdAt: String
     let tags: [String]
@@ -38,13 +38,13 @@ struct CatModel: Codable {
 
 class ViewModelCat {
     let url = "\(Global.defaultAPIUrl)\(Global.getCatListEndpoint)"
-    var catList: [CatModel] = []
+    var catList: [CatModal] = []
             
     init() {
         print("Init of viewModel")
     }
     
-    func loadData(tag: String = "cute", completion: @escaping (Result<[CatModel], Error>) -> Void) {
+    func loadData(tag: String = "cute", completion: @escaping (Result<[CatModal], Error>) -> Void) {
         let param = tag.isEmpty ? "cute" : tag
         let filter = ["tags" : param]
         
@@ -68,7 +68,7 @@ class ViewModelCat {
                                 return
                             }
                             
-                            self.catList.append(CatModel(id: id, createdAt: createdAt, tags: tags))
+                            self.catList.append(CatModal(id: id, createdAt: createdAt, tags: tags))
                         }
                     }
                 } catch {
@@ -80,6 +80,43 @@ class ViewModelCat {
             }
         }
     }
+    
+//    func loadCustomData(text: String = "", completion: @escaping (Result<[CatModal], Error>) -> Void) {
+//        let param = text.isEmpty ? "Hello world" : text
+//        
+//    //    https://cataas.com/cat/628c6a5fc303160017d5a37b/says/text
+//                
+//        
+//        AF.request(url).responseString { response in
+//            print(response)
+//            
+//            switch response.result {
+//            case .success(let value):
+//                let data = Data(value.utf8)
+//                do {
+//                    if let jsonList = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
+//                        print("Log:", jsonList)
+//                                                                                
+//                        for item in jsonList {
+//                            guard let id = item["id"] as? String,
+//                                  let createdAt = item["created_at"] as? String,
+//                                  let tags = item["tags"] as? [String]
+//                            else {
+//                                return
+//                            }
+//                            
+//                            self.catList.append(CatModal(id: id, createdAt: createdAt, tags: tags))
+//                        }
+//                    }
+//                } catch {
+//                    completion(.failure(error))
+//                }
+//                completion(.success(self.catList))
+//            case .failure(let error):
+//                completion(.failure(error))
+//            }
+//        }
+//    }
     
 //    func loadDataMockData(tag: String = "cute", completion: @escaping (String) -> ()) {
 //        let string = "[{\"id\":\"595f280c557291a9750ebf80\",\"created_at\":\"2015-11-06T18:36:37.342Z\",\"tags\":[\"cute\",\"eyes\"]},{\"id\":\"595f280e557291a9750ebf9f\",\"created_at\":\"2016-10-09T12:51:24.421Z\",\"tags\":[\"cute\",\"sleeping\"]},{\"id\":\"595f280e557291a9750ebfa6\",\"created_at\":\"2016-11-22T15:20:31.913Z\",\"tags\":[\"cute\",\"sleeping\"]}]"

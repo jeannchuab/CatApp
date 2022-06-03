@@ -28,10 +28,15 @@ class ViewController: UIViewController {
         loadDataFromAPI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     func setupCollectionView() {
         collectionView.delegate = self
-//        collectionView.
-        collectionView.dataSource = self                
+        collectionView.dataSource = self
+        collectionView.allowsSelection = true
         collectionView.register(UINib(nibName: "CollectionViewItemCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewItemCell")
     }
         
@@ -45,7 +50,7 @@ class ViewController: UIViewController {
                     self.labelDisclaimer.text = Global.textConnectionProblems
                     self.labelDisclaimer.isHidden = !catList.isEmpty
                 }
-            case .failure( _):
+            case .failure(_):
                 DispatchQueue.main.async {
                     self.collectionView.isHidden = true
                     self.labelDisclaimer.text = Global.textEmptyList
@@ -69,6 +74,20 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         } else {
             return UICollectionViewCell()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewItemCell else { return }
+        
+        if !cell.isLoading {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            if let controller = storyBoard.instantiateViewController(withIdentifier: "CustomizeViewController") as? CustomizeViewController {
+                controller.cat = viewModel.catList[indexPath.row]
+                controller.viewModel = viewModel
+                self.navigationController?.present(controller, animated: true)
+            }
+        }                        
     }
     
     //This is important to keep the scale of the cell compatible with the layout of different screens
