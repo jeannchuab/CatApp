@@ -10,7 +10,9 @@ import UIKit
 class CustomizeViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textFieldSearch: UITextField!
-        
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var textFieldDisclaimer: UILabel!
+    
     var image: UIImage?
     var cat: CatModal?
     var viewModel: ViewModelCat?
@@ -36,12 +38,24 @@ class CustomizeViewController: UIViewController {
     }
     
     func downloadImage(url: String) {
+        showDisclaimer(false)
+        activityIndicator.startAnimating()
         ImageDownloader.shared.downloadImage(with: url, completionHandler: { (image, cached) in
             DispatchQueue.main.async {
-                self.imageView.image = image
-                self.imageView.setNeedsDisplay()
+                self.activityIndicator.stopAnimating()
+                if image != Global.defaultCatImage {
+                    self.imageView.image = image
+                    self.imageView.setNeedsDisplay()
+                } else {
+                    self.showDisclaimer(true)
+                }
             }
         }, placeholderImage: Global.defaultCatImage)
+    }
+    
+    func showDisclaimer(_ show: Bool) {
+        self.textFieldDisclaimer.isHidden = !show
+        self.imageView.isHidden = show
     }
     
     func getCustomCat() {

@@ -138,6 +138,14 @@ Would like to try "baby" or "kitten"? </string>
                                     <constraint firstAttribute="width" secondItem="C0M-ea-xdL" secondAttribute="height" multiplier="1:1" id="LF9-ru-6yc"/>
                                 </constraints>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6m-60-QE4">
+                                <rect key="frame" x="49" y="257.33333333333331" width="292" height="51.333333333333314"/>
+                                <string key="text">Something bad happened 😿 
+Would like to try again with another phrase?</string>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customize a phrase for your cat. Type here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOY-6p-ale">
                                 <rect key="frame" x="16" y="480" width="358" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -147,21 +155,31 @@ Would like to try "baby" or "kitten"? </string>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="KmT-4Z-zmF">
+                                <rect key="frame" x="176.66666666666666" y="264.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.96078431369999995" green="0.96078431369999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aPc-RK-ZGw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mOY-6p-ale" firstAttribute="top" secondItem="C0M-ea-xdL" secondAttribute="bottom" constant="18" id="4cH-rI-GDD"/>
+                            <constraint firstItem="KmT-4Z-zmF" firstAttribute="centerX" secondItem="C0M-ea-xdL" secondAttribute="centerX" id="Epk-z5-Q8X"/>
+                            <constraint firstItem="I6m-60-QE4" firstAttribute="centerX" secondItem="C0M-ea-xdL" secondAttribute="centerX" id="Kp0-Di-erl"/>
                             <constraint firstItem="C0M-ea-xdL" firstAttribute="top" secondItem="aPc-RK-ZGw" secondAttribute="top" constant="16" id="PUg-Np-hzP"/>
                             <constraint firstItem="aPc-RK-ZGw" firstAttribute="trailing" secondItem="mOY-6p-ale" secondAttribute="trailing" constant="16" id="RLa-8s-fxC"/>
+                            <constraint firstItem="I6m-60-QE4" firstAttribute="centerY" secondItem="C0M-ea-xdL" secondAttribute="centerY" id="cDf-qt-YBQ"/>
                             <constraint firstItem="C0M-ea-xdL" firstAttribute="leading" secondItem="aPc-RK-ZGw" secondAttribute="leading" constant="16" id="e78-Cc-8qk"/>
                             <constraint firstItem="mOY-6p-ale" firstAttribute="leading" secondItem="aPc-RK-ZGw" secondAttribute="leading" constant="16" id="fZH-8I-PQX"/>
                             <constraint firstItem="aPc-RK-ZGw" firstAttribute="trailing" secondItem="C0M-ea-xdL" secondAttribute="trailing" constant="16" id="hRC-ZB-Tht"/>
+                            <constraint firstItem="KmT-4Z-zmF" firstAttribute="centerY" secondItem="C0M-ea-xdL" secondAttribute="centerY" id="yCb-Pr-TUa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w86-pe-RNa"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="KmT-4Z-zmF" id="SUj-ho-0FL"/>
                         <outlet property="imageView" destination="C0M-ea-xdL" id="KRc-Un-AQs"/>
+                        <outlet property="textFieldDisclaimer" destination="I6m-60-QE4" id="0On-RW-OoX"/>
                         <outlet property="textFieldSearch" destination="mOY-6p-ale" id="84x-K7-yZN"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,7 @@ class CollectionViewItemCell: UICollectionViewCell {
     
     // A previous URL temporarily stored to keep track of previous URL vs. current URL since cells are being reused
     var previousUrlString: String = ""
+    var isLoading = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,7 @@ class CollectionViewItemCell: UICollectionViewCell {
     }
         
     func setup(urlString: String) {
+        isLoading = true
         imageView.contentMode = .center
         imageView.image = Global.defaultCatImage
                 
@@ -33,6 +35,7 @@ class CollectionViewItemCell: UICollectionViewCell {
             if cached || (urlString == self.previousUrlString) {
                 self.imageView.contentMode = .scaleAspectFill
                 self.imageView.image = image
+                self.isLoading = false
             }
         }, placeholderImage: Global.defaultCatImage)
         
