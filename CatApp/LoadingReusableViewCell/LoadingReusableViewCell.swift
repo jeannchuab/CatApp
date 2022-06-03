@@ -7,7 +7,9 @@
 
 import UIKit
 
-class LoadingReusableViewCell: UICollectionViewCell {
+// TODO: Remove that
+
+class LoadingReusableViewCell: UICollectionReusableView {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     

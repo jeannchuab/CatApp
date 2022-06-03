@@ -19,6 +19,9 @@
 		951B14CB2848206A00747D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951B14C92848206A00747D49 /* LaunchScreen.storyboard */; };
 		9571859B28497CDB0061644C /* CollectionViewItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9571859928497CDB0061644C /* CollectionViewItemCell.xib */; };
 		9571859C28497CDB0061644C /* CollectionViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571859A28497CDB0061644C /* CollectionViewItemCell.swift */; };
+		9571859F28499A390061644C /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571859E28499A390061644C /* UIImageView+Extensions.swift */; };
+		957185A128499E030061644C /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957185A028499E030061644C /* LoadingImageView.swift */; };
+		957185A42849A5A70061644C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957185A32849A5A70061644C /* ImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		951B14CC2848206A00747D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9571859928497CDB0061644C /* CollectionViewItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewItemCell.xib; sourceTree = "<group>"; };
 		9571859A28497CDB0061644C /* CollectionViewItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewItemCell.swift; sourceTree = "<group>"; };
+		9571859E28499A390061644C /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		957185A028499E030061644C /* LoadingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
+		957185A32849A5A70061644C /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		C32CED4A4C8E4718A82D0894 /* Pods-CatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.release.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.release.xcconfig"; sourceTree = "<group>"; };
 		F08E61DEA96771B6CE658C6E /* Pods-CatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.debug.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,8 +105,10 @@
 		951B14BD2848206900747D49 /* CatApp */ = {
 			isa = PBXGroup;
 			children = (
+				9571859D28499A0F0061644C /* Extensions */,
 				950B8F7F2848311F00C11697 /* CollectionViewItemCell */,
 				950B8F7A2848306200C11697 /* LoadingReusableViewCell */,
+				957185A228499E080061644C /* Components */,
 				951B14BE2848206900747D49 /* AppDelegate.swift */,
 				951B14C02848206900747D49 /* SceneDelegate.swift */,
 				951B14C22848206900747D49 /* ViewController.swift */,
@@ -111,6 +119,23 @@
 				951B14CC2848206A00747D49 /* Info.plist */,
 			);
 			path = CatApp;
+			sourceTree = "<group>";
+		};
+		9571859D28499A0F0061644C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9571859E28499A390061644C /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		957185A228499E080061644C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				957185A028499E030061644C /* LoadingImageView.swift */,
+				957185A32849A5A70061644C /* ImageDownloader.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		BBFDF82DD4ABCF7823711A57 /* Pods */ = {
@@ -240,10 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				950B8F782848300D00C11697 /* LoadingReusableViewCell.swift in Sources */,
+				9571859F28499A390061644C /* UIImageView+Extensions.swift in Sources */,
 				951B14C32848206900747D49 /* ViewController.swift in Sources */,
 				950B8F752848237D00C11697 /* ViewModelCat.swift in Sources */,
 				951B14BF2848206900747D49 /* AppDelegate.swift in Sources */,
+				957185A128499E030061644C /* LoadingImageView.swift in Sources */,
 				951B14C12848206900747D49 /* SceneDelegate.swift in Sources */,
+				957185A42849A5A70061644C /* ImageDownloader.swift in Sources */,
 				9571859C28497CDB0061644C /* CollectionViewItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

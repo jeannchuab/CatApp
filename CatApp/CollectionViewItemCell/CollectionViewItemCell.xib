@@ -16,32 +16,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rgx-Ii-VGh">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Rgx-Ii-VGh">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPh-eb-gfb">
-                        <rect key="frame" x="29" y="39.5" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="28X-Ns-z82">
+                        <rect key="frame" x="40" y="40" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="ZPh-eb-gfb" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="LTR-NI-KeQ"/>
+                <constraint firstItem="28X-Ns-z82" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Jh5-lh-aLp"/>
+                <constraint firstItem="28X-Ns-z82" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="MHt-YZ-Kpl"/>
                 <constraint firstItem="Rgx-Ii-VGh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="N3d-FD-qi1"/>
                 <constraint firstItem="Rgx-Ii-VGh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RXP-ob-WpB"/>
-                <constraint firstItem="ZPh-eb-gfb" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="SBk-Jt-SF5"/>
                 <constraint firstAttribute="bottom" secondItem="Rgx-Ii-VGh" secondAttribute="bottom" id="icg-uX-YXF"/>
                 <constraint firstAttribute="trailing" secondItem="Rgx-Ii-VGh" secondAttribute="trailing" id="yH9-lF-T98"/>
             </constraints>
             <size key="customSize" width="88" height="84"/>
             <connections>
+                <outlet property="activityIndicator" destination="28X-Ns-z82" id="yid-GN-trN"/>
                 <outlet property="imageView" destination="Rgx-Ii-VGh" id="OmC-fz-feL"/>
-                <outlet property="labelTitle" destination="ZPh-eb-gfb" id="iHy-Ac-qzs"/>
             </connections>
             <point key="canvasLocation" x="159.42028985507247" y="164.73214285714286"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="catIcon" width="16" height="16"/>
+    </resources>
 </document>
