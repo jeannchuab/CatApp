@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cat List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="CatListViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de0-Du-J5V">
-                                <rect key="frame" x="21" y="396.33333333333331" width="348.33333333333331" height="51.333333333333314"/>
+                                <rect key="frame" x="16" y="396.33333333333331" width="358" height="51.333333333333314"/>
                                 <string key="text">Hummm it seems we don't have cats with this tag 😿 
 Would like to try "baby" or "kitten"? </string>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
@@ -103,12 +103,12 @@ Would like to try "baby" or "kitten"? </string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="de0-Du-J5V" secondAttribute="trailing" id="6Ei-0w-EoO"/>
+                            <constraint firstAttribute="trailing" secondItem="de0-Du-J5V" secondAttribute="trailing" constant="16" id="6Ei-0w-EoO"/>
                             <constraint firstItem="T5s-dG-uSP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYA-Ti-b0J"/>
                             <constraint firstItem="T5s-dG-uSP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DfR-H4-TBK"/>
                             <constraint firstItem="Yul-IW-qhq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LSV-PK-aRp"/>
                             <constraint firstItem="Yul-IW-qhq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="LU9-Hv-ciZ"/>
-                            <constraint firstItem="de0-Du-J5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WpR-bk-AT8"/>
+                            <constraint firstItem="de0-Du-J5V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="WpR-bk-AT8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yul-IW-qhq" secondAttribute="trailing" constant="16" id="aAb-1r-gC4"/>
                             <constraint firstItem="de0-Du-J5V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eVn-Ot-Opb"/>
                             <constraint firstItem="T5s-dG-uSP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="onO-s2-oVm"/>
@@ -129,10 +129,10 @@ Would like to try "baby" or "kitten"? </string>
             </objects>
             <point key="canvasLocation" x="1060" y="115.16587677725119"/>
         </scene>
-        <!--Customize View Controller-->
+        <!--Customize Cat View Controller-->
         <scene sceneID="KP2-ft-Ers">
             <objects>
-                <viewController storyboardIdentifier="CustomizeViewController" id="wbv-j1-wNY" customClass="CustomizeViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomizeViewController" id="wbv-j1-wNY" customClass="CustomizeCatViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5mH-j2-DDi">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

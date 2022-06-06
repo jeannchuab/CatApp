@@ -12,7 +12,8 @@ struct Global {
     static var defaultAPIUrl = "https://cataas.com/"
     static var getCatEndpoint = "cat/"
     static var getCatListEndpoint = "api/cats"
+    static var getCatCustomizedText = "/says/"
     
-    static var textConnectionProblems = "Hummm it seems we don't have cats with this tag 😿 Would like to try \"baby\" or \"kitten\"?"
-    static var textEmptyList = "We are facing connection problems 😿 Can you check your internet connection and try again in a few moments?"
+    static var textEmptyList = "Hummm it seems we don't have cats with this tag 😿 Would like to try \"baby\" or \"kitten\"?"
+    static var textConnectionProblems  = "We are facing connection problems 😿 Can you please check your internet connection and try again in a few moments?"
 }

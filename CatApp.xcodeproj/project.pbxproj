@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		948DDCCC505EB50C3BC12FB3 /* Pods_CatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEEF9F4B4145032EC980BE3 /* Pods_CatApp.framework */; };
-		950B8F752848237D00C11697 /* ViewModelCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B8F742848237D00C11697 /* ViewModelCat.swift */; };
+		950B8F752848237D00C11697 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B8F742848237D00C11697 /* CatListViewModel.swift */; };
 		951B14BF2848206900747D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B14BE2848206900747D49 /* AppDelegate.swift */; };
 		951B14C12848206900747D49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B14C02848206900747D49 /* SceneDelegate.swift */; };
-		951B14C32848206900747D49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B14C22848206900747D49 /* ViewController.swift */; };
+		951B14C32848206900747D49 /* CatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B14C22848206900747D49 /* CatListViewController.swift */; };
 		951B14C62848206900747D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951B14C42848206900747D49 /* Main.storyboard */; };
 		951B14C82848206A00747D49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951B14C72848206A00747D49 /* Assets.xcassets */; };
 		951B14CB2848206A00747D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951B14C92848206A00747D49 /* LaunchScreen.storyboard */; };
@@ -19,16 +19,17 @@
 		9571859C28497CDB0061644C /* CollectionViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571859A28497CDB0061644C /* CollectionViewItemCell.swift */; };
 		957185A42849A5A70061644C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957185A32849A5A70061644C /* ImageDownloader.swift */; };
 		957185A9284A9AAC0061644C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957185A8284A9AAC0061644C /* Global.swift */; };
-		957185AE284AA3F60061644C /* CustomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957185AD284AA3F60061644C /* CustomizeViewController.swift */; };
+		957185AE284AA3F60061644C /* CustomizeCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957185AD284AA3F60061644C /* CustomizeCatViewController.swift */; };
+		957185B1284EA5E40061644C /* CutomizeCatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957185B0284EA5E40061644C /* CutomizeCatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2AEEF9F4B4145032EC980BE3 /* Pods_CatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		950B8F742848237D00C11697 /* ViewModelCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelCat.swift; sourceTree = "<group>"; };
+		950B8F742848237D00C11697 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
 		951B14BB2848206900747D49 /* CatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951B14BE2848206900747D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		951B14C02848206900747D49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		951B14C22848206900747D49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		951B14C22848206900747D49 /* CatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewController.swift; sourceTree = "<group>"; };
 		951B14C52848206900747D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		951B14C72848206A00747D49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		951B14CA2848206A00747D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,7 +38,8 @@
 		9571859A28497CDB0061644C /* CollectionViewItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewItemCell.swift; sourceTree = "<group>"; };
 		957185A32849A5A70061644C /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		957185A8284A9AAC0061644C /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		957185AD284AA3F60061644C /* CustomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeViewController.swift; sourceTree = "<group>"; };
+		957185AD284AA3F60061644C /* CustomizeCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeCatViewController.swift; sourceTree = "<group>"; };
+		957185B0284EA5E40061644C /* CutomizeCatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomizeCatViewModel.swift; sourceTree = "<group>"; };
 		C32CED4A4C8E4718A82D0894 /* Pods-CatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.release.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.release.xcconfig"; sourceTree = "<group>"; };
 		F08E61DEA96771B6CE658C6E /* Pods-CatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.debug.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +102,7 @@
 				957185A7284A9AA10061644C /* Common */,
 				957185A228499E080061644C /* Components */,
 				957185AC284AA2420061644C /* Storyboards */,
-				957185AA284AA2060061644C /* ViewControllers */,
+				957185AA284AA2060061644C /* ViewController */,
 				957185AB284AA2120061644C /* ViewModel */,
 			);
 			path = CatApp;
@@ -122,19 +124,20 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		957185AA284AA2060061644C /* ViewControllers */ = {
+		957185AA284AA2060061644C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				951B14C22848206900747D49 /* ViewController.swift */,
-				957185AD284AA3F60061644C /* CustomizeViewController.swift */,
+				951B14C22848206900747D49 /* CatListViewController.swift */,
+				957185AD284AA3F60061644C /* CustomizeCatViewController.swift */,
 			);
-			path = ViewControllers;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		957185AB284AA2120061644C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				950B8F742848237D00C11697 /* ViewModelCat.swift */,
+				950B8F742848237D00C11697 /* CatListViewModel.swift */,
+				957185B0284EA5E40061644C /* CutomizeCatViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -274,9 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				957185A9284A9AAC0061644C /* Global.swift in Sources */,
-				951B14C32848206900747D49 /* ViewController.swift in Sources */,
-				957185AE284AA3F60061644C /* CustomizeViewController.swift in Sources */,
-				950B8F752848237D00C11697 /* ViewModelCat.swift in Sources */,
+				951B14C32848206900747D49 /* CatListViewController.swift in Sources */,
+				957185AE284AA3F60061644C /* CustomizeCatViewController.swift in Sources */,
+				950B8F752848237D00C11697 /* CatListViewModel.swift in Sources */,
+				957185B1284EA5E40061644C /* CutomizeCatViewModel.swift in Sources */,
 				951B14BF2848206900747D49 /* AppDelegate.swift in Sources */,
 				951B14C12848206900747D49 /* SceneDelegate.swift in Sources */,
 				957185A42849A5A70061644C /* ImageDownloader.swift in Sources */,
@@ -428,7 +432,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7D9JZ22K9A;
+				DEVELOPMENT_TEAM = F29795V444;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -446,7 +450,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,7 +462,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7D9JZ22K9A;
+				DEVELOPMENT_TEAM = F29795V444;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,7 +480,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

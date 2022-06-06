@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomizeViewController: UIViewController {
+class CustomizeCatViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var buttonShare: UIButton!
@@ -16,10 +16,11 @@ class CustomizeViewController: UIViewController {
     
     var image: UIImage?
     var cat: CatModal?
-    var viewModel: ViewModelCat?
+    var viewModel: CutomizeCatViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = CutomizeCatViewModel(delegate: self)
         setupLayout()
     }
         
@@ -43,49 +44,40 @@ class CustomizeViewController: UIViewController {
         
         textFieldSearch.delegate = self
         
-        if let cat = cat {
-            downloadImage(url: cat.getImageUrl())
-        }
-    }
-    
-    func downloadImage(url: String) {
-        showDisclaimer(false)
-        activityIndicator.startAnimating()
-        ImageDownloader.shared.downloadImage(with: url, completionHandler: { (image, cached) in
-            DispatchQueue.main.async {
-                self.activityIndicator.stopAnimating()
-                if image != Global.defaultCatImage {
-                    self.imageView.image = image
-                    self.imageView.setNeedsDisplay()
-                } else {
-                    self.showDisclaimer(true)
-                }
-            }
-        }, placeholderImage: Global.defaultCatImage)
-    }
-    
-    func showDisclaimer(_ show: Bool) {
-        self.textFieldDisclaimer.isHidden = !show
-        self.imageView.isHidden = show
-    }
-    
-    func getCustomCat() {
-        guard let text = textFieldSearch.text,
-                !text.isEmpty,
-                let cat = cat
-        else {
-            return
-        }
-        
-        let fullUrl = "\(cat.getImageUrl())\("/says/")\(text.replacingOccurrences(of: " ", with: "%20"))"
-        downloadImage(url: fullUrl)
+        viewModel?.downloadImage(cat: cat)
     }
 }
 
-extension CustomizeViewController: UITextFieldDelegate {
+extension CustomizeCatViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        getCustomCat()
+        viewModel?.downloadImage(cat: cat, customizedText: textFieldSearch.text)
         textFieldSearch.endEditing(true)
         return true
+    }
+}
+
+extension CustomizeCatViewController: CustomizeCatViewModelDelegate {
+    func showLoading(_ show: Bool) {
+        DispatchQueue.main.async {
+            if show {
+                self.activityIndicator.startAnimating()
+            } else {
+                self.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    func imageDownloaded(image: UIImage) {
+        DispatchQueue.main.async {
+            self.imageView.image = image
+            self.imageView.setNeedsDisplay()
+        }
+    }
+        
+    func showDisclaimer(_ show: Bool) {
+        DispatchQueue.main.async {
+            self.textFieldDisclaimer.isHidden = !show
+            self.imageView.isHidden = show
+        }        
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CatListViewController.swift
 //  CatApp
 //
 //  Created by Jeann Luiz Chuab on 01/06/22.
@@ -7,26 +7,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {    
+class CatListViewController: UIViewController {    
     @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var labelDisclaimer: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var isLoading = false
-    var arrayData: [Int] = []
-    var viewModel = ViewModelCat()
+    var viewModel: CatListViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        // TODO: Work on the customize your phrase on the cat image
-        // TODO: Maybe share the cutomized phrase on other apps?
         
         textFieldSearch.delegate = self
         
+        viewModel = CatListViewModel(delegate: self)
+        
         setupCollectionView()
-        loadDataFromAPI()
+        
+        viewModel?.loadData(tag: textFieldSearch.text)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,41 +38,40 @@ class ViewController: UIViewController {
         collectionView.allowsSelection = true
         collectionView.register(UINib(nibName: "CollectionViewItemCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewItemCell")
     }
-        
-    func loadDataFromAPI() {
-        
-        activityIndicator.startAnimating()
-        
-        guard let text = textFieldSearch.text else { return }
-        viewModel.loadData(tag: text, completion: { result in
-            switch result {
-            case .success(let catList):
-                DispatchQueue.main.async {
-                    self.collectionView.isHidden = catList.isEmpty
-                    self.labelDisclaimer.text = Global.textConnectionProblems
-                    self.labelDisclaimer.isHidden = !catList.isEmpty
-                }
-            case .failure(_):
-                DispatchQueue.main.async {
-                    self.collectionView.isHidden = true
-                    self.labelDisclaimer.text = Global.textEmptyList
-                    self.labelDisclaimer.isHidden = false
-                }
+}
+
+extension CatListViewController: CatListViewModelDelegate {
+    func imageDownloaded() {
+        self.collectionView.reloadData()
+    }
+    
+    func showLoading(_ show: Bool) {
+        DispatchQueue.main.async {
+            if show {
+                self.activityIndicator.startAnimating()
+            } else {
+                self.activityIndicator.stopAnimating()
             }
-            self.activityIndicator.stopAnimating()
-            self.collectionView.reloadData()
-        })
+        }
+    }
+    
+    func showDisclaimer(show: Bool, message: String = "") {
+        DispatchQueue.main.async {
+            self.collectionView.isHidden = show
+            self.labelDisclaimer.text = message
+            self.labelDisclaimer.isHidden = !show
+        }
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CatListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.catList.count
+        return viewModel?.catList.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewItemCell", for: indexPath) as? CollectionViewItemCell {
-            cell.setup(urlString: viewModel.catList[indexPath.row].getImageUrl())
+            cell.setup(urlString: viewModel?.catList[indexPath.row].getImageUrl() ?? "")
             return cell
         } else {
             return UICollectionViewCell()
@@ -86,10 +83,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewItemCell else { return }
         
         if !cell.isLoading {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            if let controller = storyBoard.instantiateViewController(withIdentifier: "CustomizeViewController") as? CustomizeViewController {
-                controller.cat = viewModel.catList[indexPath.row]
-                controller.viewModel = viewModel
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            if let controller = storyBoard.instantiateViewController(withIdentifier: "CustomizeViewController") as? CustomizeCatViewController {
+                controller.cat = viewModel?.catList[indexPath.row]
                 self.navigationController?.present(controller, animated: true)
             }
         }                        
@@ -101,9 +97,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension CatListViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        loadDataFromAPI()
+        viewModel?.loadData(tag: textFieldSearch.text)
         textFieldSearch.endEditing(true)
         return true
     }
