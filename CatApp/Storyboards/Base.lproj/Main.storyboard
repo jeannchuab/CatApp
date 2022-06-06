@@ -35,6 +35,10 @@ Would like to try "baby" or "kitten"? </string>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="iVd-tl-PbM">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="640"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HQR-RV-EgQ" customClass="CollectionViewItemCell" customModule="CatApp" customModuleProvider="target">
                                         <rect key="frame" x="16" y="0.0" width="120" height="120"/>
@@ -114,6 +118,7 @@ Would like to try "baby" or "kitten"? </string>
                     </view>
                     <navigationItem key="navigationItem" id="Pkm-M3-MC3"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="iVd-tl-PbM" id="jm7-zo-lJ9"/>
                         <outlet property="collectionView" destination="T5s-dG-uSP" id="ETE-ia-Y2t"/>
                         <outlet property="labelDisclaimer" destination="de0-Du-J5V" id="hdV-RZ-JHc"/>
                         <outlet property="textFieldSearch" destination="Yul-IW-qhq" id="R9I-Ei-3aw"/>
@@ -146,7 +151,7 @@ Would like to try again with another phrase?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customize a phrase for your cat. Type here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOY-6p-ale">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customize a phrase for your cat here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOY-6p-ale">
                                 <rect key="frame" x="16" y="480" width="358" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
@@ -159,18 +164,42 @@ Would like to try again with another phrase?</string>
                                 <rect key="frame" x="176.66666666666666" y="264.66666666666669" width="37" height="37"/>
                                 <color key="color" red="0.96078431369999995" green="0.96078431369999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UE8-x2-sZ3">
+                                <rect key="frame" x="16" y="546" width="358" height="50"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="U7z-57-3Em"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.forward" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Share with a friend">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="Noteworthy-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionShare:" destination="wbv-j1-wNY" eventType="touchUpInside" id="PZe-Sc-ZD6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aPc-RK-ZGw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mOY-6p-ale" firstAttribute="top" secondItem="C0M-ea-xdL" secondAttribute="bottom" constant="18" id="4cH-rI-GDD"/>
                             <constraint firstItem="KmT-4Z-zmF" firstAttribute="centerX" secondItem="C0M-ea-xdL" secondAttribute="centerX" id="Epk-z5-Q8X"/>
+                            <constraint firstItem="UE8-x2-sZ3" firstAttribute="top" secondItem="mOY-6p-ale" secondAttribute="bottom" constant="16" id="Kev-an-dPj"/>
                             <constraint firstItem="I6m-60-QE4" firstAttribute="centerX" secondItem="C0M-ea-xdL" secondAttribute="centerX" id="Kp0-Di-erl"/>
                             <constraint firstItem="C0M-ea-xdL" firstAttribute="top" secondItem="aPc-RK-ZGw" secondAttribute="top" constant="16" id="PUg-Np-hzP"/>
                             <constraint firstItem="aPc-RK-ZGw" firstAttribute="trailing" secondItem="mOY-6p-ale" secondAttribute="trailing" constant="16" id="RLa-8s-fxC"/>
+                            <constraint firstItem="UE8-x2-sZ3" firstAttribute="leading" secondItem="aPc-RK-ZGw" secondAttribute="leading" constant="16" id="ViL-zL-bMQ"/>
                             <constraint firstItem="I6m-60-QE4" firstAttribute="centerY" secondItem="C0M-ea-xdL" secondAttribute="centerY" id="cDf-qt-YBQ"/>
                             <constraint firstItem="C0M-ea-xdL" firstAttribute="leading" secondItem="aPc-RK-ZGw" secondAttribute="leading" constant="16" id="e78-Cc-8qk"/>
                             <constraint firstItem="mOY-6p-ale" firstAttribute="leading" secondItem="aPc-RK-ZGw" secondAttribute="leading" constant="16" id="fZH-8I-PQX"/>
+                            <constraint firstItem="aPc-RK-ZGw" firstAttribute="trailing" secondItem="UE8-x2-sZ3" secondAttribute="trailing" constant="16" id="gX6-Ho-p3y"/>
                             <constraint firstItem="aPc-RK-ZGw" firstAttribute="trailing" secondItem="C0M-ea-xdL" secondAttribute="trailing" constant="16" id="hRC-ZB-Tht"/>
                             <constraint firstItem="KmT-4Z-zmF" firstAttribute="centerY" secondItem="C0M-ea-xdL" secondAttribute="centerY" id="yCb-Pr-TUa"/>
                         </constraints>
@@ -178,6 +207,7 @@ Would like to try again with another phrase?</string>
                     <navigationItem key="navigationItem" id="w86-pe-RNa"/>
                     <connections>
                         <outlet property="activityIndicator" destination="KmT-4Z-zmF" id="SUj-ho-0FL"/>
+                        <outlet property="buttonShare" destination="UE8-x2-sZ3" id="60i-NW-gQ1"/>
                         <outlet property="imageView" destination="C0M-ea-xdL" id="KRc-Un-AQs"/>
                         <outlet property="textFieldDisclaimer" destination="I6m-60-QE4" id="0On-RW-OoX"/>
                         <outlet property="textFieldSearch" destination="mOY-6p-ale" id="84x-K7-yZN"/>
@@ -207,6 +237,7 @@ Would like to try again with another phrase?</string>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
         <image name="catIcon" width="24" height="24"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

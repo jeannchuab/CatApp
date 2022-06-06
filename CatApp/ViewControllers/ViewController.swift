@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var labelDisclaimer: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var isLoading = false
     var arrayData: [Int] = []
@@ -41,6 +42,9 @@ class ViewController: UIViewController {
     }
         
     func loadDataFromAPI() {
+        
+        activityIndicator.startAnimating()
+        
         guard let text = textFieldSearch.text else { return }
         viewModel.loadData(tag: text, completion: { result in
             switch result {
@@ -57,6 +61,7 @@ class ViewController: UIViewController {
                     self.labelDisclaimer.isHidden = false
                 }
             }
+            self.activityIndicator.stopAnimating()
             self.collectionView.reloadData()
         })
     }

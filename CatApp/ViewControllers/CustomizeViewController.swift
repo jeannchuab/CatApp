@@ -10,6 +10,7 @@ import UIKit
 class CustomizeViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textFieldSearch: UITextField!
+    @IBOutlet weak var buttonShare: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textFieldDisclaimer: UILabel!
     
@@ -19,8 +20,14 @@ class CustomizeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupLayout()
+    }
+        
+    @IBAction func actionShare(_ sender: Any) {
+        guard let image = imageView.image else { return }
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view //This avoid a crash on iPad
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     func setupLayout() {
@@ -29,6 +36,10 @@ class CustomizeViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = imageView.frame.size.width / 32
+        
+        buttonShare.layer.cornerRadius = buttonShare.frame.size.height / 16
+        buttonShare.layer.borderWidth = 1
+        buttonShare.layer.borderColor = UIColor.lightGray.cgColor
         
         textFieldSearch.delegate = self
         
