@@ -170,7 +170,7 @@ Would like to try again with another phrase?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="U7z-57-3Em"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.forward" catalog="system">
                                     <attributedString key="attributedTitle">
@@ -239,6 +239,9 @@ Would like to try again with another phrase?</string>
     <resources>
         <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
         <image name="catIcon" width="24" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
