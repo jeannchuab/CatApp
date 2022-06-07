@@ -435,6 +435,7 @@
 				DEVELOPMENT_TEAM = F29795V444;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatApp/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We would like access to your library to save customized cat images.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -465,6 +466,7 @@
 				DEVELOPMENT_TEAM = F29795V444;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatApp/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We would like access to your library to save customized cat images.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
