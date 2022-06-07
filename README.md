@@ -2,7 +2,7 @@
 
 ## Project definition
 
-The main goal of this project it's a integration with [CATAAS API](https://cataas.com/#/)
+The main goal of this project it's an integration with [CATAAS API](https://cataas.com/#/)
 
 ## What was used on development
  - Xcode
@@ -28,13 +28,11 @@ The main goal of this project it's a integration with [CATAAS API](https://cataa
  - [Cocoapods 1.11](https://cocoapods.org/) or above
 
 ## Instructions to run the project
-
  - After clone the project, on terminal, go to the path where the file `Podfile` is located and run `pod install`
  - Open the file CatApp.xcworkspace on Xcode
  - Build and run the project
 
 ## Previews
-
 A video preview of the project can be watched [here](https://drive.google.com/file/d/1b-DagxHeR5t5IpKUuJoUO9jnaFZ3h38a/view?usp=sharing).
 
 ![Screen Shot 2022-06-06 at 21 17 46](https://user-images.githubusercontent.com/62518806/172270102-f271d847-1caa-4d0c-8cac-59f600309b26.png)
