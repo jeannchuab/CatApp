@@ -34,6 +34,8 @@ The main goal of this project it's a integration with [CATAAS API](https://cataa
 
 ## Previews
 
+![Screen Shot 2022-06-06 at 21 17 46](https://user-images.githubusercontent.com/62518806/172270102-f271d847-1caa-4d0c-8cac-59f600309b26.png)
+![Screen Shot 2022-06-06 at 21 18 30](https://user-images.githubusercontent.com/62518806/172270134-e438fc67-be18-40b5-b7b2-f341b74a69e7.png)
 
 
 
