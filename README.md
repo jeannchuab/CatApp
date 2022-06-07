@@ -14,7 +14,7 @@ The main goal of this project it's an integration with [CATAAS API](https://cata
  - [ImageDownloader](https://gist.github.com/jayesh15111988/b95030bca927304fc31e8cbc0123f72f)
 
 ## Features
- - The user should be able to see a list of cat images
+ - The user should be able to see a list of cat images, available on [CATAAS API](https://cataas.com/#/)
  - The user should be able to search for differents cat tags, such as "White", "Black", "Babie", "Kitten" and others
  - The user should be able to customize a cat image with a phrase
  - The user should be able to share an image of a cat using the default share options available on iOS
