@@ -10,7 +10,6 @@ The main goal of this project it's an integration with [CATAAS API](https://cata
  - Storyboards
  - Autolayout
  - CollectionView
- - MVVM
  - [ImageDownloader](https://gist.github.com/jayesh15111988/b95030bca927304fc31e8cbc0123f72f)
 
 ## Features
