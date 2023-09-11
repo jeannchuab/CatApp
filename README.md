@@ -4,9 +4,10 @@
 
 The main goal of this project it's an integration with [CATAAS API](https://cataas.com/#/)
 
-## What was used on development
+## What was used in development
  - Xcode
  - Swift
+ - UIKit
  - Storyboards
  - Autolayout
  - CollectionView
@@ -14,12 +15,12 @@ The main goal of this project it's an integration with [CATAAS API](https://cata
 
 ## Features
  - The user should be able to see a list of cat images, available on [CATAAS API](https://cataas.com/#/)
- - The user should be able to search for differents cat tags, such as "White", "Black", "Babie", "Kitten" and others
+ - The user should be able to search for different cat tags, such as "White", "Black", "Babie", "Kitten" and others
  - The user should be able to customize a cat image with a phrase
  - The user should be able to share an image of a cat using the default share options available on iOS
  - A friendly message should be displayed in case of connection problems
  - A friendly message should be displayed if there are no results for the search
- - A friendly message should be displayed if some problem occured when customizing the phrase
+ - A friendly message should be displayed if some problem occurs when customizing the phrase
  - The app layout should be compatible with Dark mode
 
 ## Required tools
@@ -27,7 +28,7 @@ The main goal of this project it's an integration with [CATAAS API](https://cata
  - [Cocoapods 1.11](https://cocoapods.org/) or above
 
 ## Instructions to run the project
- - After clone the project, on terminal, go to the path where the file `Podfile` is located and run `pod install`
+ - After clone the project, on the terminal, go to the path where the file `Podfile` is located and run `pod install`
  - Open the file CatApp.xcworkspace on Xcode
  - Build and run the project
 
