@@ -9,12 +9,10 @@ import UIKit
 
 struct CatModel: Codable {
     let id: String
-    let createdAt: String
     let tags: [String]
 
-    private enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case createdAt = "created_at"
         case tags
     }
     

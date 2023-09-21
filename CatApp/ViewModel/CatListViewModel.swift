@@ -47,16 +47,15 @@ class CatListViewModel {
                         print("Log:", jsonList)
 
                         for item in jsonList {
-                            guard let id = item["id"] as? String,
-                                  let createdAt = item["created_at"] as? String,
-                                  let tags = item["tags"] as? [String]
+                            guard let id = item[CatModel.CodingKeys.id.rawValue] as? String,
+                                  let tags = item[CatModel.CodingKeys.tags.rawValue] as? [String]
                             else {
                                 self.delegate?.showLoading(false)
                                 self.delegate?.showDisclaimer(show: true, message: Global.textConnectionProblems)
                                 return
                             }
 
-                            self.catList.append(CatModel(id: id, createdAt: createdAt, tags: tags))
+                            self.catList.append(CatModel(id: id, tags: tags))
                         }
 
                         self.delegate?.showLoading(false)
