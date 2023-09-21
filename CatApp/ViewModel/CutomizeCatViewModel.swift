@@ -22,7 +22,7 @@ class CutomizeCatViewModel {
         self.delegate = delegate
     }
     
-    func downloadImage(cat: CatModal?, customizedText: String? = "") {
+    func downloadImage(cat: CatModel?, customizedText: String? = "") {
                         
         guard let cat = cat, let customizedText = customizedText else {
             delegate?.showDisclaimer(true)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F372B0D2ABCE8DC004014BE /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F372B0C2ABCE8DC004014BE /* CatModel.swift */; };
 		948DDCCC505EB50C3BC12FB3 /* Pods_CatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEEF9F4B4145032EC980BE3 /* Pods_CatApp.framework */; };
 		950B8F752848237D00C11697 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B8F742848237D00C11697 /* CatListViewModel.swift */; };
 		951B14BF2848206900747D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B14BE2848206900747D49 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F372B0C2ABCE8DC004014BE /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
 		2AEEF9F4B4145032EC980BE3 /* Pods_CatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		950B8F742848237D00C11697 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
 		951B14BB2848206900747D49 /* CatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F372B0B2ABCE8CD004014BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F372B0C2ABCE8DC004014BE /* CatModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4F56A2C52F90AB451ED69DCB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		951B14BD2848206900747D49 /* CatApp */ = {
 			isa = PBXGroup;
 			children = (
+				0F372B0B2ABCE8CD004014BE /* Model */,
 				951B14BE2848206900747D49 /* AppDelegate.swift */,
 				951B14C02848206900747D49 /* SceneDelegate.swift */,
 				951B14C72848206A00747D49 /* Assets.xcassets */,
@@ -284,6 +295,7 @@
 				951B14BF2848206900747D49 /* AppDelegate.swift in Sources */,
 				951B14C12848206900747D49 /* SceneDelegate.swift in Sources */,
 				957185A42849A5A70061644C /* ImageDownloader.swift in Sources */,
+				0F372B0D2ABCE8DC004014BE /* CatModel.swift in Sources */,
 				9571859C28497CDB0061644C /* CollectionViewItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

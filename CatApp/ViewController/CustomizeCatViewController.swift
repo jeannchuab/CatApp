@@ -15,7 +15,7 @@ class CustomizeCatViewController: UIViewController {
     @IBOutlet weak var textFieldDisclaimer: UILabel!
     
     var image: UIImage?
-    var cat: CatModal?
+    var cat: CatModel?
     var viewModel: CutomizeCatViewModel?
     
     override func viewDidLoad() {
